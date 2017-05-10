@@ -8,4 +8,7 @@ public interface ActivityDao {
 	
 	List<Activity> selectByAll();
 	Activity selectById(int id);
+	void insert(Activity activity);
+	void update(Activity activity);
+	void destroy(int id);
 }

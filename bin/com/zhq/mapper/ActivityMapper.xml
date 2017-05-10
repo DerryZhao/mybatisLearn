@@ -8,4 +8,16 @@
 	<select id="selectById" parameterType="int" resultType="Activity">
 	    select * from activity where id = #{id};
 	</select>
+	
+	<update id="update" parameterType="Activity">
+		update activity set title=#{title},description=#{note},imgPath=#{imgPath},start_time=#{startTime},end_time=#{endTime};	
+	</update>
+	
+	<delete id="destroy" parameterType="int">
+		delete from activity where id = #{id};
+	</delete>
+	
+	<insert id="insert" parameterType="Activity">
+		insert into activity set title=#{title},description=#{note},imgPath=#{imgPath},start_time=#{startTime},end_time=#{endTime};
+	</insert>
 </mapper>
